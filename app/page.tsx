@@ -1,27 +1,39 @@
+import { RiArrowRightSLine } from "@remixicon/react";
+import { Fira_Code } from "next/font/google";
+
+const firaCode = Fira_Code({
+  weight: "500",
+  subsets: ["latin"],
+});
+
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen font-sans p-4 md:p-12 max-w-455 m-auto">
-        <main className="flex justify-between min-h-screen w-full flex-col bg-[#314158] py-32 sm:items-start rounded-lg">
-          <h1 className="sr-only">Jordan Baker</h1>
-          <div className="w-full px-6">
-            <h4 className="text-lg">Hello world! I am</h4>
-            <h2 className="text-5xl lg:text-6xl text-[#F8FAFC] my-2">Jordan Baker</h2>
-            <h3 className="text-xl lg:text-3xl text-indigo-500">Fullstack .NET Developer</h3>
+      
+        <h1 className="sr-only">Jordan Baker</h1>
+        <div className="w-full px-6 sm:p-0 sm:max-w-302.5 m-auto relative flex flex-col gap-19">
+          <div>
+            <h4 className="text-lg/[27px]">Hello world! I am</h4>
+            <h2 className={`text-5xl/[57.6px] ${firaCode.className} lg:text-6xl text-[#F8FAFC] my-2`}>Jordan Baker</h2>
+            <div className="flex items-center text-indigo-500">
+              <RiArrowRightSLine className="" />
+              <h3 className="text-xl/[30px] lg:text-3xl">Fullstack Developer</h3>
+            </div>
           </div>
-          <div className="w-full px-6">
-            <p className="text-sm text-wrap text-left mb-2">// find my profile on Github:</p>
-            <p className="text-sm text-wrap text-left">
-              <span className="text-indigo-500">string</span>
-              <span className="text-teal-400">githubLink</span>
-              <span>=</span>
-              <a href="https://github.com/JordanBaker852" className="underline text-bold text-[#FFA1AD] break-all">`https://github.com/JordanBaker852`</a>
+          <div>
+            <p className="text-sm/[19.6px] text-wrap li text-left mb-2">// find my profile on Github:</p>
+            <p className="text-sm/[19.6px] text-wrap text-left">
+              <span className="text-indigo-500 mr-1">string</span>
+              <span className="text-teal-400 mr-1">githubLink</span>
+              <span className="mr-1">=</span>
+              <a href="https://github.com/JordanBaker852" className="underline text-bold text-[#FFA1AD] break-all">"https://github.com/JordanBaker852"</a>
             </p>
           </div>
-          <div className="bg-teal-400 opacity-40 blur-sm max-w-2xl h-28 absolute top-52"></div>
-          <div className="bg-indigo-400 opacity-40 blur-sm max-w-2xl h-28 absolute top-52"></div>
-        </main>
-      </div>
+          <div className="absolute inset-0 z-10 sm:hidden">
+            <img className="absolute -top-8 -left-4 blur-3xl" src="/green-background-blur.svg" alt="" />
+            <img className="absolute bottom-0 -right-4 blur-3xl" src="/blue-background-blur.svg" alt="" />
+          </div>
+        </div>
     </>
   );
 }

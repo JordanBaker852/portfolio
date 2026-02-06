@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const firaCode = Fira_Code({
+  weight: "300",
   subsets: ["latin"],
 });
 
@@ -24,10 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${firaCode.className} antialiased`}>
+        <div className="min-h-screen fira-code max-w-445 max-h-235 m-auto">
+          <main className="flex justify-between border border-[#314147] rounded-lg min-h-screen w-full flex-col bg-[#0F172B] sm:items-start">
+            <header className="w-full h-14">Header placeholder</header>
+            {children}
+            <footer className="w-full h-14">Footer placeholder</footer>
+          </main>
+        </div>
       </body>
     </html>
   );
