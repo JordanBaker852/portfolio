@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import { RiMenuLine } from "@remixicon/react";
 
 const firaCode = Fira_Code({
   weight: "300",
@@ -20,12 +22,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${firaCode.className} antialiased`}>
-        <div className="min-h-screen fira-code max-w-445 max-h-235 m-auto">
-          <main className="flex justify-between border border-[#314147] rounded-lg min-h-screen w-full flex-col bg-[#0F172B] sm:items-start">
-            <header className="w-full h-14">Header placeholder</header>
+        <div className="flex flex-col bg-[#0F172B] border border-[#314147] rounded-lg fira-code max-w-453 m-auto">
+          <header className="w-full flex justify-between items-center px-4 h-14 border-b border-b-[#314147]">
+            <h2 className="inline-flex">
+              <Link href="/">jordan-baker</Link>
+            </h2>
+            <button className="inline-flex text-[#90A1B9]">
+              <RiMenuLine />
+            </button>
+          </header>
+          <main className="flex w-full min-h-screen flex-col sm:items-start">
             {children}
-            <footer className="w-full h-14">Footer placeholder</footer>
           </main>
+          <footer className="w-full h-14">Footer placeholder</footer>
         </div>
       </body>
     </html>
