@@ -1,7 +1,7 @@
 const GithubProfileCodeLink = () => {
     return(
         <div>
-            <p className="text-sm/[19.6px] text-wrap li text-left mb-2">// find my profile on Github:</p>
+            <p className="text-sm/[19.6px] text-wrap text-left mb-2">// find my profile on Github:</p>
             <p className="text-sm/[19.6px] text-wrap text-left">
                 <span className="text-indigo-500 mr-1">string</span>
                 <span className="text-teal-400 mr-1">githubLink</span>

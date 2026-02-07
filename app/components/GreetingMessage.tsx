@@ -8,7 +8,7 @@ const firaCode = Fira_Code({
 
 const GreetingMessage = () => {
     return(
-        <div>
+        <div className="mb-18.75">
             <h4 className="text-lg/[27px]">Hello world! I am</h4>
             <h2 className={`text-5xl/[57.6px] ${firaCode.className} lg:text-6xl text-[#F8FAFC] my-2`}>Jordan Baker</h2>
             <div className="flex items-center text-indigo-500">
