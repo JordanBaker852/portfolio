@@ -3,7 +3,6 @@ import snakeGame from "@/public/snake-game.svg";
 import BackdropBlur from "./components/BackdropBlur";
 import GithubProfileCodeLink from "./components/GithubProfileCodeLink";
 import GreetingMessage from "./components/GreetingMessage";
-
 export default function Home() {
   return (
     <main className="flex justify-center items-center min-h-full m-auto lg:px-8 flex-row gap-36.5">
@@ -15,8 +14,9 @@ export default function Home() {
           <BackdropBlur viewport="mobile" />
         </div>
       </div>
+
       <div className="hidden relative lg:block">
-        <Image src={snakeGame} className="z-1" alt="Snake game placeholder"></Image>
+        <Image loading="eager" src={snakeGame} className="z-1" alt="Snake game placeholder"></Image>
         <BackdropBlur viewport="desktop" />
       </div>
     </main>
