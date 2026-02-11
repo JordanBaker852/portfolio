@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { RiMenuLine } from "@remixicon/react";
-import navTabs from "./data/navigationTabs.json";
+import Header from "./components/Header";
 
 const firaCode = Fira_Code({
   weight: "300",
@@ -24,26 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${firaCode.className} antialiased`}>
         <div className="flex flex-col justify-between min-h-dvh bg-[#0F172B] border border-[#314147] rounded-lg fira-code max-w-453 m-auto">
-          <header className="w-full relative flex justify-between items-center h-14 border-b border-b-[#314147]">
-            <h2 className="inline-flex p-4">
-              <Link href="/">jordan-baker</Link>
-            </h2>
-            <button className="inline-flex text-[#90A1B9] p-4">
-              <RiMenuLine />
-            </button>
-            <nav className="absolute hidden top-14 w-full h-[calc(100dvh-112px)] bg-[#0F172B]">
-              <ul className="list-none">
-                <li className="px-6 py-3 border-b border-b-[#314147]"># navigate:</li>
-                {
-                  navTabs.map(x => 
-                    <li key={x.title} className="px-6 py-3 border-b border-b-[#314147]">
-                      <a href={x.redirect}>{x.title}</a>
-                    </li>
-                  )
-                }
-              </ul>
-            </nav>
-          </header>
+          <Header />
             {children}
           <footer className="w-full h-14">Footer placeholder</footer>
         </div>
