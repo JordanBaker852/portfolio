@@ -10,9 +10,7 @@ type Props = {
     viewport: "desktop" | "mobile"
 };
 
-const buildDesktopNavItems = (navItems: Array<NavItem>): JSX.Element[] => {
-    
-    const currentPath: string = usePathname();
+const buildDesktopNavItems = (currentPath: string, navItems: Array<NavItem>): JSX.Element[] => {
 
     const listItems: JSX.Element[] =  navItems.map(x => {
         const isCurrentTab: boolean = currentPath == x.redirect;
@@ -25,9 +23,11 @@ const buildDesktopNavItems = (navItems: Array<NavItem>): JSX.Element[] => {
         : ""
 
         return(
-            <li key={x.title} className={`hidden lg:inline-block p-4 border-r border-r-[#314147] 
+            <li key={x.title} className={`hidden lg:inline-block border-r border-r-[#314147] 
             last:float-right last:border-l last:border-l-[#314147] ${selectedTabClass}`}>
-                <Link href={x.redirect}>{x.title}</Link>
+                <Link className="p-4 inline-block" href={x.redirect}>
+                    {x.title}
+                </Link>
             </li>
         );
     });
@@ -39,8 +39,10 @@ const buildMobileNavItems = (navItems: Array<NavItem>): JSX.Element[] => {
 
     const listItems: JSX.Element[] = navItems.map(x => {
         return (
-            <li key={x.title} className="px-6 py-3 border-b border-b-[#314147]">
-                <Link href={x.redirect}>{x.title}</Link>
+            <li key={x.title} className="border-b border-b-[#314147]">
+                <Link className="px-6 py-3 inline-block w-full" href={x.redirect}>
+                    {x.title}
+                </Link>
             </li>
         );
     });
@@ -49,10 +51,11 @@ const buildMobileNavItems = (navItems: Array<NavItem>): JSX.Element[] => {
 };
 
 const HeaderNavItems = ({items, viewport, children}: PropsWithChildren<Props>) => {
-    
+    const currentPath: string = usePathname();
+
     const listItems = viewport == "mobile" 
     ? buildMobileNavItems(items) 
-    : buildDesktopNavItems(items);
+    : buildDesktopNavItems(currentPath, items);
 
     return(
         <ul className="list-none w-full">
