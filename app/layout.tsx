@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer.";
 
 const firaCode = Fira_Code({
   weight: "300",
@@ -24,7 +25,7 @@ export default function RootLayout({
         <div className="flex flex-col justify-between min-h-dvh bg-[#0F172B] border border-[#314147] rounded-lg fira-code max-w-453 m-auto">
           <Header />
             {children}
-          <footer className="w-full h-14">Footer placeholder</footer>
+          <Footer />
         </div>
       </body>
     </html>

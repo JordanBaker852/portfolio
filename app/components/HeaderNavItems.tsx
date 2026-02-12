@@ -24,7 +24,7 @@ const buildDesktopNavItems = (currentPath: string, navItems: Array<NavItem>): JS
 
         return(
             <li key={x.title} className={`hidden lg:inline-block border-r border-r-[#314147] 
-            last:float-right last:border-l last:border-l-[#314147] ${selectedTabClass}`}>
+            last:float-right last:border-l last:border-l-[#314147] last:border-r-0 ${selectedTabClass}`}>
                 <Link className="p-4 inline-block" href={x.redirect}>
                     {x.title}
                 </Link>
