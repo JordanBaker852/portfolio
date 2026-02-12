@@ -1,8 +1,14 @@
+'use client'
+
 import { RiMenuLine } from "@remixicon/react";
 import navigationTabs from "../data/navigationTabs.json";
 import HeaderNavItems from "./HeaderNavItems";
+import { useState } from "react";
 
 const Header = () => {
+    const [toggleMobileHeader, setToggleMobileHeader] = useState(false);
+    const mobileHeaderVisibilityClass = toggleMobileHeader ? "block lg:hidden" : "hidden"
+
     return (
         <header className="w-full relative border-b border-b-[#314147]">
             <nav className="flex">
@@ -11,11 +17,11 @@ const Header = () => {
                         jordan-baker
                     </li>
                 </HeaderNavItems>
-                <button className="lg:hidden inline-flex text-[#90A1B9] p-4">
+                <button className="lg:hidden inline-flex text-[#90A1B9] p-4" onClick={() => setToggleMobileHeader(prev => !prev)}>
                     <RiMenuLine />
                 </button>
             </nav>
-            <nav className="absolute hidden z-1 top-14 w-full h-[calc(100dvh-112px)] bg-[#0F172B]">
+            <nav className={`absolute ${mobileHeaderVisibilityClass} z-1 top-14 w-full h-[calc(100dvh-112px)] bg-[#0F172B]`}>
                 <HeaderNavItems viewport="mobile" items={navigationTabs}>
                     <li className="px-6 py-3 border-b border-b-[#314147]">
                         # navigate:
