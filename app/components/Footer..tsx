@@ -7,13 +7,13 @@ const Footer = () => {
             <ul className="list-none w-full">
                 <li className="inline-flex last:float-right border-r border-r-[#314147] last:border-l last:border-l-[#314147] last:border-r-0">
                     <a className="p-4 inline-flex" href="https://www.linkedin.com/in/jordan-baker-b0b871205/">
-                        <RiLinkedinFill />
+                        <RiLinkedinFill className="transition" color="#62748E" />
                     </a>
                 </li>
                 <li className="inline-flex last:float-right border-r border-r-[#314147] last:border-l last:border-l-[#314147] last:border-r-0">
-                    <a className="p-4 lg:py-4 lg:px-8 inline-flex gap-2.5" href="https://www.linkedin.com/in/jordan-baker-b0b871205/">
+                    <a className="p-4 lg:py-4 lg:px-8 inline-flex gap-2.5 hover:text-[#CAD5E2]" href="https://github.com/JordanBaker852">
                         <span className="hidden lg:block">@JordanBaker852</span>
-                        <RiGithubFill />
+                        <RiGithubFill className="transition" color="#62748E" />
                     </a>
                 </li>
             </ul>

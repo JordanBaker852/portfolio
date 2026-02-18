@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${firaCode.className} antialiased`}>
-        <div className="flex flex-col justify-between min-h-dvh bg-[#0F172B] border border-[#314147] rounded-lg fira-code max-w-453 m-auto">
+        <div className="flex flex-col min-h-dvh bg-[#0F172B] border border-[#314147] rounded-lg fira-code max-w-453 m-auto">
           <Header />
             {children}
           <Footer />

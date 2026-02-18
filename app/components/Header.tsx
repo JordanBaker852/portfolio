@@ -14,7 +14,7 @@ const Header = () => {
         <header className="w-full relative border-b border-b-[#314147]">
             <nav className="flex">
                 <HeaderNavItems viewport="desktop" items={navigationTabs}>
-                    <li className="p-4 inline-block lg:w-[17.47%] lg:border-r lg:border-r-[#314147]">
+                    <li className="p-4 inline-block lg:w-[17.5%] lg:border-r lg:border-r-[#314147]">
                         jordan-baker
                     </li>
                 </HeaderNavItems>

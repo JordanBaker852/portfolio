@@ -1,0 +1,24 @@
+[
+    {
+      "name": "bio",
+      "items": [
+        { "name": "login-form.tsx" },
+        { "name": "register-form.tsx" }
+      ]
+    },
+    {
+      "name": "interest",
+      "items": [
+        { "name": "login-form.tsx" },
+        { "name": "register-form.tsx" }
+      ]
+    },
+    {
+      "name": "education",
+      "items": [
+        { "name": "university" },
+        { "name": "college" },
+        { "name": "secondary-school" }
+      ]
+    }
+  ]
