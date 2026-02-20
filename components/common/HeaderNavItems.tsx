@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { NavItem } from "../utils/customTypes";
+import { NavItem } from "@/app/utils/customTypes";
 import { usePathname } from "next/navigation";
 import { JSX, PropsWithChildren } from "react";
 

@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -5,8 +7,10 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
+import { useState } from "react";
 
-type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] };
+type ColourHex = `#${string}`;
+type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[], colour: ColourHex };
 
 type Props = {
   items: FileTreeItem[]
@@ -15,12 +19,15 @@ type Props = {
 export function CollapsibleFileTree({items}: Props) {
   const fileTree: FileTreeItem[] = items;
 
+  const [fileSelected, setFileSelected] = useState<string>("");
+
   const renderItem = (fileItem: FileTreeItem) => {
     if ("items" in fileItem) {
       return (
-        <Collapsible key={fileItem.name}>
-          <CollapsibleTrigger>
-            <Button variant="ghost" size="sm" className="group hover:bg-accent hover:text-accent-foreground w-full justify-start transition-none"><ChevronRightIcon className="transition-transform group-data-[state=open]:rotate-90" /><FolderIcon />{fileItem.name}</Button>
+        <Collapsible key={fileItem.name} className="group">
+          <CollapsibleTrigger className="flex items-center group-data-[state=open]:text-[#F8FAFC] hover:bg-accent hover:text-accent-foreground hover:cursor-pointer w-full justify-start transition">
+              <ChevronRightIcon size="16" className="mr-3 transition-transform group-data-[state=open]:rotate-90" />
+              <FolderIcon size="16" className="mr-2" color={fileItem.colour} fill={fileItem.colour}/>{fileItem.name}
           </CollapsibleTrigger>
           <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
@@ -30,12 +37,16 @@ export function CollapsibleFileTree({items}: Props) {
         </Collapsible>
       );
     }
+
+    const colour: string = fileItem.name === fileSelected ? "text-[#F8FAFC]" : ""
+
     return (
       <Button
         key={fileItem.name}
         variant="link"
         size="sm"
-        className="text-foreground w-full justify-start gap-2"
+        className={`text-foreground w-full justify-start gap-2 hover:cursor-pointer ${colour}`}
+        onClick={() => setFileSelected(prev => prev = fileItem.name)}
       >
         <FileIcon />
         <span>{fileItem.name}</span>

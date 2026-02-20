@@ -2,7 +2,7 @@
 
 import { RiArrowRightSFill } from "@remixicon/react";
 import { useState } from "react";
-import { CollapsibleFileTree } from "../components/CollapsibleFileTree";
+import { CollapsibleFileTree } from "@/components/common/CollapsibleFileTree";
 import personalInfo from "../data/aboutMePersonalInfo.json";
 
 export default function AboutMe() {

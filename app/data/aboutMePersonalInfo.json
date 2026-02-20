@@ -1,20 +1,23 @@
 [
     {
       "name": "bio",
+      "colour": "#FF637E",
       "items": [
-        { "name": "login-form.tsx" },
-        { "name": "register-form.tsx" }
+        { "name": "summary" }
       ]
     },
     {
-      "name": "interest",
+      "name": "interests",
+      "colour": "#00D5BE",
       "items": [
-        { "name": "login-form.tsx" },
-        { "name": "register-form.tsx" }
+        { "name": "music" },
+        { "name": "gaming" },
+        { "name": "boxing" }
       ]
     },
     {
       "name": "education",
+      "colour": "#615FFF",
       "items": [
         { "name": "university" },
         { "name": "college" },

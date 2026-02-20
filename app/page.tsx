@@ -1,8 +1,8 @@
 import Image from "next/image";
 import snakeGame from "@/public/snake-game.svg";
-import BackdropBlur from "./components/BackdropBlur";
-import GithubProfileCodeLink from "./components/GithubProfileCodeLink";
-import GreetingMessage from "./components/GreetingMessage";
+import BackdropBlur from "@/components/common/BackdropBlur";
+import GithubProfileCodeLink from "@/components/common/GithubProfileCodeLink";
+import GreetingMessage from "@/components/common/GreetingMessage";
 
 export default function Home() {
   return (

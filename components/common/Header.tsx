@@ -1,7 +1,7 @@
 'use client'
 
 import { RiCloseLine, RiMenuLine } from "@remixicon/react";
-import navigationTabs from "../data/navigationTabs.json";
+import navigationTabs from "@/app/data/navigationTabs.json";
 import HeaderNavItems from "./HeaderNavItems";
 import { JSX, useState } from "react";
 
