@@ -6,7 +6,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
+import { RiArrowDropRightLine, RiFolder6Fill, RiMarkdownFill } from "@remixicon/react";
 import { useState } from "react";
 
 type ColourHex = `#${string}`;
@@ -26,8 +26,8 @@ export function CollapsibleFileTree({items}: Props) {
       return (
         <Collapsible key={fileItem.name} className="group">
           <CollapsibleTrigger className="flex items-center group-data-[state=open]:text-[#F8FAFC] hover:bg-accent hover:text-accent-foreground hover:cursor-pointer w-full justify-start transition">
-              <ChevronRightIcon size="16" className="mr-3 transition-transform group-data-[state=open]:rotate-90" />
-              <FolderIcon size="16" className="mr-2" color={fileItem.colour} fill={fileItem.colour}/>{fileItem.name}
+              <RiArrowDropRightLine className="mr-3 transition-transform group-data-[state=open]:rotate-90" />
+              <RiFolder6Fill size="16" className="mr-2" color={fileItem.colour} fillRule="inherit" fillOpacity={100}/>{fileItem.name}
           </CollapsibleTrigger>
           <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
@@ -48,7 +48,7 @@ export function CollapsibleFileTree({items}: Props) {
         className={`text-foreground w-full justify-start gap-2 hover:cursor-pointer ${colour}`}
         onClick={() => setFileSelected(prev => prev = fileItem.name)}
       >
-        <FileIcon />
+        <RiMarkdownFill />
         <span>{fileItem.name}</span>
       </Button>
     );
