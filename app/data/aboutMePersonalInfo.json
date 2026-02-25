@@ -7,21 +7,26 @@
       ]
     },
     {
+      "name": "work-experience",
+      "colour": "#615FFF",
+      "items": [
+        { 
+          "name": "likewize",  
+          "colour": "#FFB86A",
+          "items": [
+            { "name": "full-stack-developer" },
+            { "name": ".net-developer" }
+          ]
+        }
+      ]
+    },
+    {
       "name": "interests",
       "colour": "#00D5BE",
       "items": [
         { "name": "music" },
         { "name": "gaming" },
         { "name": "boxing" }
-      ]
-    },
-    {
-      "name": "education",
-      "colour": "#615FFF",
-      "items": [
-        { "name": "university" },
-        { "name": "college" },
-        { "name": "secondary-school" }
       ]
     }
   ]

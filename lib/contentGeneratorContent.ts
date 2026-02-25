@@ -2,8 +2,22 @@ export const generateBioContent = (): string => {
   return `
 Welcome to my portfolio! 👋
     
-I'm a Full Stack .NET Developer with a passion for building scalable,
-efficient, and user-friendly applications.
+Hello! I'm Jordan, a Full Stack .NET Developer with over 4 years of experience in building scalable,
+efficient, and user-friendly applications. I've worked with multiple UK and US device support companies: 
+- Samsung 
+- Costco
+- John Lewis
+- EE
+to name a few.
+    `;
+};
+
+
+export const generateLandingAboutMeContent = (): string => {
+  return `
+Welcome to my portfolio! 👋
+
+Select an item from the the file tree to find out more about myself!
 
 ### 🔍 What You'll Find Here
 
