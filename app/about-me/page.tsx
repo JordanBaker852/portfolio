@@ -45,11 +45,11 @@ export default function AboutMe() {
 
   return (
     <main className="min-h-full flex-[1_1_auto]">
-      <div className="flex flex-col md:flex-row md:h-[calc(100dvh-116px)]">
+      <div className="flex flex-col h-[calc(100dvh-116px)] md:flex-row">
           <Accordion>
             <CollapsibleFileTree onFileSelected={handlePageContentChange} items={personalInfo} />
           </Accordion>
-          <div className="w-full md:flex-4 md:w-1/2 overflow-auto">
+          <div className="w-full overflow-auto md:flex-4">
             <Editor langauge="" content={pageContent} />
           </div>
       </div>
