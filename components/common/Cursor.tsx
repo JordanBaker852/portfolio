@@ -47,19 +47,19 @@ const Cursor = () => {
     return () => window.removeEventListener("pointermove", move);
   }, []);
 
-//   useEffect(() => {
-//     const interactive = document.querySelectorAll("a, button");
+  useEffect(() => {
+    const interactive = document.querySelectorAll("a, button");
 
-//     interactive.forEach(el => {
-//       el.addEventListener("mouseenter", () => {
-//         ringRef.current?.classList.add("scale-150");
-//       });
+    interactive.forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        ringRef.current?.classList.add("h-12", "w-12");
+      });
 
-//       el.addEventListener("mouseleave", () => {
-//         ringRef.current?.classList.remove("scale-150");
-//       });
-//     });
-//   }, []);
+      el.addEventListener("mouseleave", () => {
+        ringRef.current?.classList.remove("h-12", "w-12");
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -83,11 +83,11 @@ const Cursor = () => {
           pointer-events-none
           fixed top-0 left-0
           z-9998
-          h-8 w-8
+          h-6 w-6
           -translate-x-1/2 -translate-y-1/2
           rounded-full
           border border-white/60
-          transition-transform duration-200 ease-out
+          transition-all duration-200 ease-out
           mix-blend-difference
         "
       />

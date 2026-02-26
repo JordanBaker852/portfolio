@@ -6,7 +6,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { RiArrowDropRightLine, RiFileLine, RiFolder6Fill } from "@remixicon/react";
+import { RiArrowDropRightLine, RiFolder6Fill, RiMarkdownFill } from "@remixicon/react";
 import { useState } from "react";
 
 type ColourHex = `#${string}`;
@@ -54,7 +54,7 @@ export function CollapsibleFileTree({items, onFileSelected}: Props) {
         className={`text-foreground w-full justify-start gap-2 hover:cursor-pointer ${colour}`}
         onClick={() => handleFileSelected(fileItem.name)}
       >
-        <RiFileLine />
+        <RiMarkdownFill />
         <span>{fileItem.name}</span>
       </Button>
     );
