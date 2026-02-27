@@ -45,6 +45,7 @@ export default function AboutMe() {
 
   return (
     <main className="min-h-full flex-[1_1_auto]">
+      <h1 className="sr-only">About me</h1>
       <div className="flex flex-col h-[calc(100dvh-116px)] md:flex-row">
           <Accordion>
             <CollapsibleFileTree onFileSelected={handlePageContentChange} items={personalInfo} />

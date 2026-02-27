@@ -1,9 +1,11 @@
-export default function AboutMe() {
+import ProjectCard from "@/components/common/ProjectCard";
+
+export default function Projects() {
   return (
-    <main className="flex justify-center items-center min-h-full m-auto lg:px-8 flex-row gap-36.5">
-      <h1 className="sr-only">Jordan Baker</h1>
-      <div className="px-6 sm:p-0 relative">
-        Hello! Projects....
+    <main className="min-h-full m-auto">
+      <h1 className="sr-only">My Projects</h1>
+      <div className="px-6">
+        <ProjectCard imageUrl="/portfolio-site.png" description="Portolio site - Yes, like a snake biting it&apos;s own tail!"></ProjectCard>
       </div>
     </main>
   );
